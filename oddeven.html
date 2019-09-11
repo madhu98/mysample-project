@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <head>
+    <title>JavaScript to print Odd and Even Numbers within a Range!</title>
+    <script>
+      function printOddNums(){
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var oddNums = "<br>Odd Numbers:<br>";
+        for(i=start; i<=end; i++){
+          if(i % 2 != 0){
+            oddNums += i + "<br>";
+          }
+        }
+        document.getElementById("result").innerHTML = oddNums;
+      }
+      function printEvenNums(){
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
+        var evenNums = "<br>Even Numbers:<br>";
+        for(i=start; i<=end; i++)
+        {
+          if(i % 2 == 0){
+            evenNums += i + "<br>";
+          }
+        }
+        document.getElementById("result").innerHTML = evenNums;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>JavaScript to print Odd and Even Numbers within a Range!</h3>
+    Start: <input type="number" min="0" id="start" value="1" />
+    End: <input type="number" id="end" min="1" value="50" />
+    <input type="button" onclick="printOddNums()" value="Print Odd Numbers" /><br>
+    <input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
+    <div id="result"></div>
+  </body>
+</html>
